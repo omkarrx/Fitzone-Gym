@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Plans | Fitzone Gym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12141d;
+            --card-navy: #1c1f2e;
+            --accent-orange: #ff7d2a;
+            --accent-orange-hover: #e66a1f;
+            --card-border: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            background-color: var(--bg-dark); /* Dark theme background */
+            color: #ffffff;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        /* Custom card styling matched to index.php */
+        .card-plan {
+            background-color: var(--card-navy);
+            border: 1px solid var(--card-border);
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .card-plan:hover {
+            border-color: rgba(255, 125, 42, 0.4);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .btn-orange {
+            background-color: var(--accent-orange);
+            color: white;
+            transition: all 0.2s ease;
+        }
+        .btn-orange:hover {
+            background-color: var(--accent-orange-hover);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="flex items-center justify-between px-8 py-5 w-full sticky top-0 bg-[#12141d]/90 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-[#ff7d2a] rounded-lg flex items-center justify-center">
+                <i class="fas fa-dumbbell text-white text-xs"></i>
+            </div>
+            <span class="text-xl font-bold tracking-tight">Fitzone Gym</span>
+        </div>
+        <div class="flex items-center gap-8 text-sm font-medium">
+            <a href="index.php" class="text-gray-300 hover:text-[#ff7d2a] transition-colors">Home</a>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Choose Your Plan 💪</h1>
+        <p class="text-gray-400 text-lg">Select the best membership that fits your fitness goals</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="card-plan p-8 text-center flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">Basic Plan</h3>
+                    <div class="text-4xl font-extrabold mb-2">Rs.999</div>
+                    <p class="text-gray-400 text-sm mb-6">1 Month</p>
+                    <div class="space-y-3 text-gray-300 mb-8">
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> Full Gym Access</p>
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> Locker Room</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-plan p-8 text-center flex flex-col justify-between border-2 border-orange-500/20">
+                <div>
+                    <div class="bg-orange-500 text-white text-[10px] uppercase font-bold py-1 px-3 rounded-full inline-block mb-4">Popular</div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">Standard Plan</h3>
+                    <div class="text-4xl font-extrabold mb-2">Rs.2499</div>
+                    <p class="text-gray-400 text-sm mb-6">3 Months</p>
+                    <div class="space-y-3 text-gray-300 mb-8">
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> Gym + Cardio</p>
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> Free Water</p>
+                    </div>
+                </div>
+             </div>
+
+            <div class="card-plan p-8 text-center flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">Premium Plan</h3>
+                    <div class="text-4xl font-extrabold mb-2">Rs.4499</div>
+                    <p class="text-gray-400 text-sm mb-6">6 Months</p>
+                    <div class="space-y-3 text-gray-300 mb-8">
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> Personal Training</p>
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> Diet Plan</p>
+                    </div>
+                </div>
+             </div>
+
+            <div class="card-plan p-8 text-center flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">Premium-Gold</h3>
+                    <div class="text-4xl font-extrabold mb-2">Rs.5999</div>
+                    <p class="text-gray-400 text-sm mb-6">1 Year</p>
+                    <div class="space-y-3 text-gray-300 mb-8">
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> All Facilities</p>
+                        <p><i class="fas fa-check text-green-500 mr-2"></i> Guest Passes</p>
+                    </div>
+                </div>
+             </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-[#0b0d12] py-10 border-t border-white/5 text-center mt-20">
+        <p class="text-gray-500 text-sm">
+            © 2026 FitZone Gym | <i class="far fa-envelope text-[#ff7d2a]"></i> fitlife@gym.com
+        </p>
+    </footer>
+
+</body>
+</html>
